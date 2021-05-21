@@ -10,16 +10,16 @@ peso = float(input("Digite seu peso: "))
 altura = float(input("Digite sua altura: "))
 
 #gerando o imc
-imc = peso / (altura*altura)
-print("Seu IMC é de {:.2f}".format(imc))
+imc = peso / (altura**2)
+print("Seu IMC é de {:.1f}".format(imc))
 #verificando o status
 if imc < 18.5:
-    print("Você está abaixo do peso.")
-elif imc >= 18.5 and imc <= 25:
-    print("Você está no peso ideal.")
-elif imc > 25 and imc <= 30:
-    print("Você está com sobrepeso.")
-elif imc > 30 and imc <= 40:
-    print("Você está com obesidade.")
+    print("Você está ABAIXO DO PESO.")
+elif imc >= 18.5 and imc < 25:
+    print("Você está no PESO IDEAL.")
+elif imc >= 25 and imc < 30:
+    print("Você está com SOBREPESO.")
+elif imc >= 30 and imc < 40:
+    print("Você está com OBESIDADE.")
 else:
-    print("Você está com obesidade mórbida.")
+    print("Você está com OBESIDADE MÓRBIDA.")
